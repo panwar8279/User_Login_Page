@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        div{
+            font-size: 10px;
+        }
+        .container{
+            
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 400px;
+            display: block;
+           padding: 10px;
+           margin: 50px auto;
+          
+           background-color: rgb(177, 221, 177);
+        }
+        *{
+           
+            text-align: center;
+        }
+        input{
+            margin: 5px;
+            padding: 5px;
+            width: 300px;
+            border-radius: 10px;
+            border: 1px solid gray;
+        }
+        .btn{
+            background-color: rgb(121, 121, 228);
+            border-radius: 10px;
+            outline: none;
+            cursor: pointer;
+            transition:0.5s ;
+        }
+        ::placeholder{
+            font-size: 10px;
+           
+        }
+        #email_error,
+        #pass_error{
+            color: red;
+           margin:auto;
+           margin-left: 80px;
+           padding: 2px;
+            background-color: rgb(255,0,0,0.3);
+            width: 290px;
+            border-radius: 10px;
+            display: none;
+        }
+        .btn:hover{
+            background-color: blue;
+        }
+        input::after{
+            border: none;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Login</h1>
+        <form action="./home.html" name="form" method="get" onsubmit="return validated()">
+            <div class="form_login">
+              First Name:  <input type="text" id="firstName" placeholder="Enter your first name">
+            <br>
+              Last Name:<input type="text"  id="lastName" placeholder="Enter your last name">
+              <br>
+              Mobile_No:<input type="number" id="Mobile" placeholder="Enter your mobile number">
+              <br>
+              Email Address:<input  type="email"  id="email" name="email" placeholder="Enter your email">
+              <div id="email_error">Please fill your email</div>
+              <br>
+              Password: <input  type="password"  id="pasword" name="password" placeholder="Enter your password">
+              <div id="pass_error">Please fill your password</div>
+              <br>
+            <button type="submit" class="btn ">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="./login.js"></script>
+</html>
